@@ -1,9 +1,9 @@
-const client=mqtt.connect("ws://broker.hivemq.com:8000/mqtt");
+const client=mqtt.connect("wss://broker.emqx.io:8084/mqtt");
 const btnToggle=document.querySelector('#ledToggle');
 const currStatus=document.querySelector('#ledStatus');
 const lastReceived=document.querySelector('#lastReceived');
 client.subscribe("ismail/espOut/led1");
-var ledBool
+var ledBool=false;
 
 function formatDate(date) {
     // from https://stackoverflow.com/a/25275808
