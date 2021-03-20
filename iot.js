@@ -34,6 +34,8 @@ function sendLedOff() {
 
 function ledON() {
     if (ledBool) {
+        btnToggle.classList.remove("btn-secondary");
+        btnToggle.classList.add("btn-warning");
         currStatus.textContent="LED STATUS: ON";
         // btnToggle.classList.add("btn-warning");
         // btnToggle.classList.remove("btn-secondary");
@@ -46,6 +48,8 @@ function ledON() {
 
 function ledOFF() {
     if (!ledBool) {
+        btnToggle.classList.remove("btn-warning");
+        btnToggle.classList.add("btn-secondary")
         currStatus.textContent="LED STATUS: OFF";
         // btnToggle.classList.add("btn-secondary");
         // btnToggle.classList.remove("btn-warning");
@@ -54,6 +58,7 @@ function ledOFF() {
     };
 
 };
+
 btnToggle.addEventListener("click", () => {
     btnToggle.classList.toggle("btn-warning")
     btnToggle.classList.toggle("btn-secondary")
